@@ -44,17 +44,20 @@ tel.addEventListener('input',
 
 /* User need to follow pre defined Password rules.
 *Minimum 8 Characters
+*Should have at least 1 Upper Case
+*
 */
 
 const password = document.querySelector('#password')
 const passError = document.querySelector('.pass-error')
 password.addEventListener('input', 
     function(){
-    let passRegex = RegExp('[\\S]{8,}')
+    
+    let passRegex = RegExp('^(?=.{8,})(?=.*[A-Z]){1}(?=.*[0-9]){1}(?=.*[!@#$%^&*]){1}')
     if(passRegex.test(password.value))
         passError.textContent = ""
     else 
-        passError.textContent = "Incorrect Password."
+        passError.textContent = "Incorrect Password."        
 })
 
 const salary = document.querySelector('#salary')
