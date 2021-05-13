@@ -10,6 +10,20 @@ text.addEventListener('input',
     else
         textError.textContent = "Name is Incorrect."
 })
+/*User need to enter a valid email 
+*Email has 3 mandatory parts(abc, bl and co)
+*and optional(xyz and in) with precise @and positions
+*/
+const email = document.querySelector('#email')
+const mailError = document.querySelector('.email-error')
+email.addEventListener('input', 
+    function(){
+    let mailRegex = RegExp('^[a-z]+([_+-.]?[a-z0-9]+)*[@][a-z0-9]+[.]([a-z]+){2,}([.]?[a-z]{2})?$')
+    if(mailRegex.test(email.value))
+         mailError.textContent = ""
+    else
+        mailError.textContent = "Incorrect Email."
+})
 
 const salary = document.querySelector('#salary')
 const output = document.querySelector('.salary-output')
