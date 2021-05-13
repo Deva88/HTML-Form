@@ -1,0 +1,64 @@
+<!-- Simple form work with HTML 5 Inputs and Forms -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>
+            Basic input types
+        </title>
+        <link rel="stylesheet" href="formInput.css" media="all">
+    </head>
+    <body>
+        <script defer src="formInput.js"></script>
+        <form>
+            <header class="headerContainer"><h1>HTML 5 Form Input Fields</h1></header>
+            <div>
+                <label for="text">Text input type for Name: </label>
+                <input type="text" id="text" name="text">
+                <error-output class="text-error" for="text"></error-output>
+            </div>
+            <div>
+                <label for="password">Password input type: </label>
+                <input type="password" id="password" name="password">
+                <error-output class="pass-error" for="password"></error-output>
+            </div>
+            <div>
+                <label for="email">Email input type: </label>
+                <input type="email" id="email" name="email">
+                <error-output class="email-error" for="email"></error-output>
+            </div>
+            <div>
+                <label for="url">Url input type:</label>
+                <input type ="url" id="url" name="url">
+            </div>
+            <div>
+                <label for="number">Number input type:</label>
+                <input type ="number" id="number" name="number">
+            </div>
+            <div>
+                <label for="tel">Telephone input type: </label>
+                <input type="tel" id="tel" name="tel">
+                <error-output class="mobile-error" for="tel"></error-output>
+            </div>
+            <div>
+                <label for="search">Search input type:</label>
+                <input type ="search" id="search" name="search">
+            </div>
+            <div class="nativeDateTimePicker">
+                <label for="party">Choose a date and time:</label>
+                <input type ="datetime-local" id="party" name="bday">
+                <span class="validity"></span>
+            </div>
+            <div>
+                <label for="salary">Choose your salary:</label>
+                <input type ="range" id="salary" name="salary" min="20000"max="70000"step="100"value="40000">
+                <output class="salary-output" for="salary">40000</output>
+            </div>
+            <div>
+             <button align: center>Submit</button>
+            </div>
+        </form>
+    </body>
+</html>
