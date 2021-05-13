@@ -10,10 +10,12 @@ text.addEventListener('input',
     else
         textError.textContent = "Name is Incorrect."
 })
+
 /*User need to enter a valid email 
 *Email has 3 mandatory parts(abc, bl and co)
 *and optional(xyz and in) with precise @and positions
 */
+
 const email = document.querySelector('#email')
 const mailError = document.querySelector('.email-error')
 email.addEventListener('input', 
@@ -23,6 +25,21 @@ email.addEventListener('input',
          mailError.textContent = ""
     else
         mailError.textContent = "Incorrect Email."
+})
+
+/* User need to follow pre-defined Mobile Formate
+*Country code follow by space and 10 digit number
+*/
+
+const mobile = document.querySelector('#tel')
+const mobileError = document.querySelector('.mobile-error')
+tel.addEventListener('input', 
+    function(){
+    let mobileRegex = RegExp('[0-9]{2}\\s[0-9]{10}')
+    if(mobileRegex.test(mobile.value))
+        mobileError.textContent = ""
+    else 
+        mobileError.textContent = "Incorrect Mobile. Please specify in 9X -XXXXXXXXXX format"
 })
 
 const salary = document.querySelector('#salary')
