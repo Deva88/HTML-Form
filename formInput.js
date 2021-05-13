@@ -42,6 +42,21 @@ tel.addEventListener('input',
         mobileError.textContent = "Incorrect Mobile. Please specify in 9X -XXXXXXXXXX format"
 })
 
+/* User need to follow pre defined Password rules.
+*Minimum 8 Characters
+*/
+
+const password = document.querySelector('#password')
+const passError = document.querySelector('.pass-error')
+password.addEventListener('input', 
+    function(){
+    let passRegex = RegExp('[\\S]{8,}')
+    if(passRegex.test(password.value))
+        passError.textContent = ""
+    else 
+        passError.textContent = "Incorrect Password."
+})
+
 const salary = document.querySelector('#salary')
 const output = document.querySelector('.salary-output')
 output.textContent = salary.value;
